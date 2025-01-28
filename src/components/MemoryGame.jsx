@@ -74,7 +74,7 @@ const MemoryGame = () => {
   // 4. Render the Game UI
   return (
     <div className="memory-game">
-      <h2>Memory Game</h2>
+      <h2>Memory Game di Stefano</h2>
       <div className="cards-container">
         {cards.map((card) => (
           <div
