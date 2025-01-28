@@ -91,7 +91,7 @@ const MemoryGame = () => {
           </div>
         ))}
       </div>
-      {gameOver && <div className="game-over">Game Over! You Won!</div>}
+      {gameOver && <div className="game-over">Il Gioco e' finito Stefano! Hai vinto!</div>}
     </div>
   );
 };
