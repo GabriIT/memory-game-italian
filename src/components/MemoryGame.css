@@ -1,0 +1,69 @@
+.memory-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 120px); /* Increased card width */
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    width: 120px; /* Increased card width */
+    height: 120px; /* Increased card height */
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .card.flipped .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  
+  .card-front {
+    background-color: #ddd;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    font-size: 1.2em; /* Reduced font size */
+  }
+  
+  .card-back.picture {
+    transform: scale(4); /* Scale the emoji by 120% */
+  }
+
+  .card.matched .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .game-over {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: green;
+  }
